@@ -77,7 +77,8 @@ public class EmployeeController {
      * @param employeeDTO
      * @return
      */
-    @PostMapping
+    //TODO   原来没加path我已加上
+    @PostMapping("/save")
     public Result save(@RequestBody EmployeeDTO employeeDTO) {
         log.info("新增员工:{}",employeeDTO);
         employeeService.save(employeeDTO);

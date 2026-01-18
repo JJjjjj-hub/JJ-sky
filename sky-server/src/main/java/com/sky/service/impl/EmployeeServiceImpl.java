@@ -70,7 +70,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         //拷贝DTO类
         BeanUtils.copyProperties(employeeDTO,employee);
         //设置初始状态,为1正常，为0封存
-        employee.setStatus(StatusConstant.DISABLE);
+        employee.setStatus(StatusConstant.ENABLE);
         //设置初始密码,初始为123456md5加密
         employee.setPassword(DigestUtils.md5DigestAsHex(PasswordConstant.DEFAULT_PASSWORD.getBytes()));
         //设置创建更新时间
