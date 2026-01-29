@@ -34,5 +34,12 @@ public interface EmployeeMapper {
      * @return
      */
     Page<Employee> pageQuery(EmployeePageQueryDTO employeePageQueryDTO);
-        //因为使用动态sql所以不用注解写sql，而使用xml文件
+    //因为使用动态sql所以不用注解写sql，而使用xml文件
+
+    /**
+     * 启用禁用员工
+     * 根据主键动态更新
+     *
+     */
+    void update(Employee employee);
 }
